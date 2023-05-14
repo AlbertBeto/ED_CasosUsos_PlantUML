@@ -1,0 +1,23 @@
+@startuml
+left to right direction
+:new Actor: as cliente
+usecase (Identificarse) as ide
+usecase (Pagar) as pagar
+usecase (Elegir mensajero) as elegMensaka
+usecase (Confirmar) as confirm
+
+cliente -- ide
+cliente -- pagar
+cliente -- elegMensaka
+cliente -- confirm
+
+
+usecase "Registrarse" as reg
+usecase "Pagar con tarjeta" as pagTar
+usecase "Pagar con transferencia" as pagTra
+
+ide <.. reg : <<extend>>
+
+pagTar -up-|> pagar
+pagTra -up-|> pagar
+@enduml
