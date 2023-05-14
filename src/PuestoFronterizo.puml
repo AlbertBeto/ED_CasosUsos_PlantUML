@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+:Ciudadano: as ciudadano
+:Ciudadano Extranjero: as ciuExtr
+(Registrar entrada) as regEnt
+(Tomar huellas) as tomHue
+
+ciudadano --- regEnt
+ciuExtr --- tomHue
+
+tomHue .left..> regEnt : <<extend>>
+
+ciudadano <|--right- ciuExtr
+@enduml
