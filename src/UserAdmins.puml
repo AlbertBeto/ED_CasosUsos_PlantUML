@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+left to right direction
+
+:Usuario: as user
+:Administrador: as admin
+
+user -- (Iniciar sesion)
+user -- (Recuperar contraseña)
+user -- (Modificar contraseña)
+user -- (Cerrar sesion)
+
+admin -- (Registrar usuario)
+admin -- (Instalar programa)
+
+admin -left-|> user
+@enduml
