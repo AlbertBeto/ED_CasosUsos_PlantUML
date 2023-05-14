@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+:Cliente: as cliente
+usecase (Meter dinero) as metDin
+usecase (Pedir azucar) as pedAzu
+usecase (Pedir Producto) as pedPro
+usecase (Cancelar) as cancel
+
+cliente -- metDin
+cliente -- pedAzu
+cliente -- pedPro
+cliente -- cancel
+
+usecase "Devolver dinero" as dev
+
+pedPro ..> dev : <<include>>
+cancel ..> dev : <<include>>
+@enduml
